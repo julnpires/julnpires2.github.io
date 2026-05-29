@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PetWalk - Chat com Carla</title>
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-btn" href="conversas.html" aria-label="Voltar">‹</a>
+    <h1>Carla</h1>
+  </header>
+
+  <main>
+    <div class="chat-header muted">Passeio agendado — Hoje 14:00</div>
+
+    <div id="chat-list" class="chat-list">
+      <div class="walker-card">
+        <div><strong>Carla:</strong> Oi Juliana! Vi que você agendou um passeio com a Mel para hoje às 14h. Pode me contar um pouco sobre ela?</div>
+      </div>
+      <div class="walker-card msg-user">
+        <div><strong>Você:</strong> Olá! Ela adora correr, mas precisa de guia.</div>
+      </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+    <div class="chat-input">
+      <input class="form-control" type="text" placeholder="Digite uma mensagem..." aria-label="Mensagem">
+      <button class="btn primary">Enviar</button>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="configuracoes.html">
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span>Config.</span>
+    </a>
+    <a class="nav-item" href="buscar-walkers.html">
+      <span class="nav-icon" aria-hidden="true">🔍</span>
+      <span>Buscar</span>
+    </a>
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span>Início</span>
+    </a>
+    <a class="nav-item active" href="conversas.html">
+      <span class="nav-icon" aria-hidden="true">💬</span>
+      <span>Chat</span>
+    </a>
+    <a class="nav-item" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">👤</span>
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <script src="js/chat.js" defer></script>
+</body>
+</html>

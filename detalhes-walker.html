@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PetWalk - Carla</title>
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-btn" href="buscar-walkers.html" aria-label="Voltar">‹</a>
+    <h1>Carla (Andadora)</h1>
+  </header>
+
+  <main>
+    <div class="walker-card">
+      <div class="walker-left">
+        <div class="avatar-wrap">
+          <img class="avatar" src="img/avatar1.svg" alt="Carla">
+          <span class="status-dot" aria-hidden="true"></span>
+        </div>
+        <div class="walker-info">
+          <div class="walker-name">Carla <span class="small">★★★★★ · 2km</span></div>
+          <div class="verified">127 passeios · Verificada</div>
+        </div>
+      </div>
+      <div class="price">R$35</div>
+    </div>
+
+    <div class="container-pad section details-section">
+      <p><strong>Descrição:</strong> Amo animais e tenho 3 anos de experiência como dog walker.</p>
+      <p><strong>Aceita:</strong> Cães pequenos e médios</p>
+
+      <h2 class="section-title">Horários disponíveis — selecione um</h2>
+      <div class="time-list" aria-label="Horários disponíveis">
+        <button class="time-chip" type="button">08:00</button>
+        <button class="time-chip" type="button">09:00</button>
+        <button class="time-chip unavailable" type="button" disabled aria-disabled="true">10:00</button>
+        <button class="time-chip" type="button">11:00</button>
+        <button class="time-chip" type="button">13:00</button>
+        <button class="time-chip" type="button">14:00</button>
+        <button class="time-chip" type="button">15:00</button>
+        <button class="time-chip" type="button">16:00</button>
+      </div>
+
+      <div class="action-row">
+        <a id="btn-agendar" class="btn primary" href="horarios.html">Selecionar Horário</a>
+        <a class="btn" href="conversas.html">Enviar Mensagem</a>
+      </div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="configuracoes.html">
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span>Config.</span>
+    </a>
+    <a class="nav-item active" href="buscar-walkers.html">
+      <span class="nav-icon" aria-hidden="true">🔍</span>
+      <span>Buscar</span>
+    </a>
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span>Início</span>
+    </a>
+    <a class="nav-item" href="conversas.html">
+      <span class="nav-icon" aria-hidden="true">💬</span>
+      <span>Chat</span>
+    </a>
+    <a class="nav-item" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">👤</span>
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <script src="js/booking.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PetWalk - Perfil</title>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Perfil</h1>
+  </header>
+
+  <main>
+    <div class="profile-hero">
+      <img class="avatar-lg" src="img/avatar2.svg" alt="Juliana N.">
+      <h2>Juliana N.</h2>
+      <p>robertomb4@al.insper.edu.br</p>
+      <a class="profile-edit-btn" href="#">Editar perfil</a>
+    </div>
+
+    <h2 class="section-title">Meus pets</h2>
+    <ul id="lista-pets" class="walkers"></ul>
+
+    <a class="btn-add" href="adicionar-pet.html">+ Adicionar Pet</a>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="configuracoes.html">
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span>Config.</span>
+    </a>
+    <a class="nav-item" href="buscar-walkers.html">
+      <span class="nav-icon" aria-hidden="true">🔍</span>
+      <span>Buscar</span>
+    </a>
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span>Início</span>
+    </a>
+    <a class="nav-item" href="conversas.html">
+      <span class="nav-icon" aria-hidden="true">💬</span>
+      <span>Chat</span>
+    </a>
+    <a class="nav-item active" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">👤</span>
+      <span>Perfil</span>
+    </a>
+  </nav>
+  <script src="js/perfil-pets.js?v=3"></script>
+</body>
+</html>

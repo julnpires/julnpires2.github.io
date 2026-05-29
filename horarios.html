@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PetWalk - Agendar Passeio</title>
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-btn" href="detalhes-walker.html" aria-label="Voltar">‹</a>
+    <h1>Passeio para...</h1>
+  </header>
+
+  <main>
+    <div class="container-pad">
+      <h3 class="section-title">Horário selecionado</h3>
+      <p class="muted" id="horario-display">14:00 — Hoje | <a href="detalhes-walker.html">Alterar</a></p>
+
+      <h3 class="section-title">Selecionar Pet</h3>
+      <ul id="pet-lista" class="walkers">
+        <li>
+          <div class="card-link">
+            <div class="walker-card">
+              <div class="walker-left">
+                <div class="avatar-wrap">
+                  <img class="avatar" src="img/avatar1.svg" alt="Mel">
+                </div>
+                <div class="walker-info">
+                  <div class="walker-name">Mel</div>
+                  <div class="walker-meta">Cachorro · Border Collie</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-link">
+            <div class="walker-card">
+              <div class="walker-left">
+                <div class="avatar-wrap">
+                  <img class="avatar" src="img/avatar2.svg" alt="Rooki">
+                </div>
+                <div class="walker-info">
+                  <div class="walker-name">Rooki</div>
+                  <div class="walker-meta">Cachorro · Poodle</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="section-title">Tipo de serviço</h3>
+      <ul id="servico-lista" class="walkers">
+        <li>
+          <div class="card-link">
+            <div class="walker-card servico-card" data-servico="Passeio">
+              <span class="servico-icon">🐕</span>
+              <div class="walker-info">
+                <div class="walker-name">Passeio</div>
+                <div class="walker-meta">30min a 1h</div>
+              </div>
+              <div class="price">R$35</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-link">
+            <div class="walker-card servico-card" data-servico="Hospedagem">
+              <span class="servico-icon">🏠</span>
+              <div class="walker-info">
+                <div class="walker-name">Hospedagem</div>
+                <div class="walker-meta">Por dia</div>
+              </div>
+              <div class="price">R$80</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-link">
+            <div class="walker-card servico-card" data-servico="Banho">
+              <span class="servico-icon">✂️</span>
+              <div class="walker-info">
+                <div class="walker-name">Banho &amp; Tosa</div>
+                <div class="walker-meta">Sessão única</div>
+              </div>
+              <div class="price">R$60</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="section-title">Passeadora</h3>
+      <div class="walker-card">
+        <div class="walker-left">
+          <div class="avatar-wrap">
+            <img class="avatar" src="img/avatar1.svg" alt="Carla">
+          </div>
+          <div class="walker-info">
+            <div class="walker-name">Carla <span class="small">★★★★★</span></div>
+            <div class="walker-meta">Ander Pet · R$35</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <a id="btn-checkout" class="btn primary btn-disabled" href="checkout.html">Checkout →</a>
+      </div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span>Config.</span>
+    </a>
+    <a class="nav-item active" href="buscar-walkers.html">
+      <span class="nav-icon" aria-hidden="true">🔍</span>
+      <span>Buscar</span>
+    </a>
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span>Início</span>
+    </a>
+    <a class="nav-item" href="conversas.html">
+      <span class="nav-icon" aria-hidden="true">💬</span>
+      <span>Chat</span>
+    </a>
+    <a class="nav-item" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">👤</span>
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <script src="js/booking.js" defer></script>
+</body>
+</html>

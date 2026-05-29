@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PetWalk - Buscar</title>
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-btn" href="index.html" aria-label="Voltar">‹</a>
+    <h1>Buscar</h1>
+  </header>
+
+  <main>
+    <div class="search-wrapper">
+      <input id="buscar-search" class="search" type="search" placeholder="Buscar por nome...">
+    </div>
+
+    <div class="chips" role="tablist" aria-label="Filtrar por serviço">
+      <button class="chip active" data-servico="todos" aria-pressed="true">Todos</button>
+      <button class="chip" data-servico="passeio" aria-pressed="false">🐾 Passeio</button>
+      <button class="chip" data-servico="hospedagem" aria-pressed="false">🏠 Hospedagem</button>
+      <button class="chip" data-servico="banho" aria-pressed="false">✂️ Banho</button>
+      <button class="chip" data-servico="vet" aria-pressed="false">🩺 Vet</button>
+    </div>
+
+    <div class="sort-chips" aria-label="Ordenar por">
+      <button class="sort-chip active" data-sort="rating">★ Avaliação</button>
+      <button class="sort-chip" data-sort="preco">💰 Menor preço</button>
+      <button class="sort-chip" data-sort="km">📍 Mais próximo</button>
+    </div>
+
+    <ul id="lista-walkers" class="walkers">
+
+      <li data-rating="5.0" data-preco="35" data-km="0.8" data-servicos="passeio">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Carla">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Carla <span class="small">★5.0 · 0.8km</span></div>
+                <div class="verified">✓ Verificada · Passeio</div>
+              </div>
+            </div>
+            <div class="price">R$35</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.9" data-preco="45" data-km="2.0" data-servicos="hospedagem">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Fiona A.">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Fiona A. <span class="small">★4.9 · 2.0km</span></div>
+                <div class="verified">✓ Verificada · Hospedagem</div>
+              </div>
+            </div>
+            <div class="price">R$45/dia</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="5.0" data-preco="50" data-km="0.5" data-servicos="banho">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar3.svg" alt="Priscila S.">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Priscila S. <span class="small">★5.0 · 0.5km</span></div>
+                <div class="verified">✓ Verificada · Banho & Tosa</div>
+              </div>
+            </div>
+            <div class="price">R$50</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.8" data-preco="120" data-km="1.2" data-servicos="vet">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Dr. Leandro">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Dr. Leandro <span class="small">★4.8 · 1.2km</span></div>
+                <div class="verified">✓ Verificado · Veterinário</div>
+              </div>
+            </div>
+            <div class="price">R$120</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.7" data-preco="30" data-km="1.4" data-servicos="passeio">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar2.svg" alt="Carlos">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Carlos <span class="small">★4.7 · 1.4km</span></div>
+                <div class="verified">✓ Verificado · Passeio</div>
+              </div>
+            </div>
+            <div class="price">R$30</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.6" data-preco="60" data-km="1.8" data-servicos="hospedagem">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar2.svg" alt="Rodrigo B.">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Rodrigo B. <span class="small">★4.6 · 1.8km</span></div>
+                <div class="verified">✓ Verificado · Hospedagem</div>
+              </div>
+            </div>
+            <div class="price">R$60/dia</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.9" data-preco="40" data-km="2.0" data-servicos="banho">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar3.svg" alt="Sabrina">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Sabrina <span class="small">★4.9 · 2.0km</span></div>
+                <div class="verified">✓ Verificada · Banho & Tosa</div>
+              </div>
+            </div>
+            <div class="price">R$40</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.9" data-preco="100" data-km="3.1" data-servicos="vet">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar3.svg" alt="Dra. Clara">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Dra. Clara <span class="small">★4.9 · 3.1km</span></div>
+                <div class="verified">✓ Verificada · Veterinária</div>
+              </div>
+            </div>
+            <div class="price">R$100</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="4.2" data-preco="28" data-km="2.8" data-servicos="passeio">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar1.svg" alt="Alfredo">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Alfredo <span class="small">★4.2 · 2.8km</span></div>
+                <div class="verified">✓ Verificado · Passeio</div>
+              </div>
+            </div>
+            <div class="price">R$28</div>
+          </div>
+        </a>
+      </li>
+
+      <li data-rating="3.8" data-preco="25" data-km="4.1" data-servicos="passeio">
+        <a class="card-link" href="detalhes-walker.html">
+          <div class="walker-card">
+            <div class="walker-left">
+              <div class="avatar-wrap">
+                <img class="avatar" src="img/avatar2.svg" alt="Jessiye">
+                <span class="status-dot" aria-hidden="true"></span>
+              </div>
+              <div class="walker-info">
+                <div class="walker-name">Jessiye <span class="small">★3.8 · 4.1km</span></div>
+                <div class="verified">✓ Verificada · Passeio</div>
+              </div>
+            </div>
+            <div class="price">R$25</div>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="configuracoes.html">
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span>Config.</span>
+    </a>
+    <a class="nav-item active" href="buscar-walkers.html">
+      <span class="nav-icon" aria-hidden="true">🔍</span>
+      <span>Buscar</span>
+    </a>
+    <a class="nav-item" href="index.html">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span>Início</span>
+    </a>
+    <a class="nav-item" href="conversas.html">
+      <span class="nav-icon" aria-hidden="true">💬</span>
+      <span>Chat</span>
+    </a>
+    <a class="nav-item" href="perfil-pets.html">
+      <span class="nav-icon" aria-hidden="true">👤</span>
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <script src="js/buscar.js"></script>
+</body>
+</html>
