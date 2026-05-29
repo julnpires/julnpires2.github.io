@@ -97,9 +97,18 @@ function preencherCheckout() {
     month: '2-digit'
   });
 
+  function adicionarUmaHora(hora) {
+    var match = hora.trim().match(/^(\d{2}):(\d{2})/);
+    if (!match) return hora;
+    var horas = parseInt(match[1], 10) + 1;
+    var minutos = match[2];
+    if (horas === 24) horas = 0;
+    return match[1] + ':' + minutos + ' — ' + String(horas).padStart(2, '0') + ':' + minutos;
+  }
+
   var horarioTexto = horario;
   if (!horarioTexto.includes('—')) {
-    horarioTexto = horarioTexto + ' — ' + horarioTexto;
+    horarioTexto = adicionarUmaHora(horarioTexto);
   }
 
   var elemServico = document.getElementById('checkout-servico');
@@ -119,6 +128,11 @@ function preencherCheckout() {
   if (elemServicoValor) { elemServicoValor.textContent = 'R$ ' + precoServico.toFixed(2).replace('.', ','); }
   if (elemTaxa) { elemTaxa.textContent = 'R$ ' + taxaServico.toFixed(2).replace('.', ','); }
   if (elemTotal) { elemTotal.textContent = 'R$ ' + total.toFixed(2).replace('.', ','); }
+
+  var btnConfirm = document.getElementById('checkout-confirm');
+  if (btnConfirm) {
+    btnConfirm.textContent = 'Confirmar ' + 'R$ ' + total.toFixed(2).replace('.', ',');
+  }
 }
 
 if (document.getElementById('checkout-servico')) {
