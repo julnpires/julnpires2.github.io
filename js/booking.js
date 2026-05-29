@@ -135,6 +135,45 @@ function preencherCheckout() {
   }
 }
 
+function preencherConfirmacao() {
+  var servico = sessionStorage.getItem('servico_selecionado') || 'Passeio';
+  var pet = sessionStorage.getItem('pet_selecionado') || 'Mel';
+  var horario = sessionStorage.getItem('horario_selecionado') || '14:00';
+
+  var servicoNome = servico === 'Banho' ? 'Banho & Tosa' : servico === 'Passeio' ? 'Passeio · 1h' : servico === 'Hospedagem' ? 'Hospedagem' : servico;
+  var precoServico = servico === 'Hospedagem' ? 80 : servico === 'Banho' ? 60 : 35;
+  var taxaServico = 3.5;
+  var total = precoServico + taxaServico;
+
+  function adicionarUmaHora(hora) {
+    var match = hora.trim().match(/^(\d{2}):(\d{2})/);
+    if (!match) return hora;
+    var horas = parseInt(match[1], 10) + 1;
+    var minutos = match[2];
+    if (horas === 24) horas = 0;
+    return match[1] + ':' + minutos + ' — ' + String(horas).padStart(2, '0') + ':' + minutos;
+  }
+
+  var horarioTexto = horario;
+  if (!horarioTexto.includes('—')) {
+    horarioTexto = adicionarUmaHora(horarioTexto);
+  }
+
+  var elemPet = document.getElementById('confirm-pet');
+  var elemHorario = document.getElementById('confirm-horario');
+  var elemServico = document.getElementById('confirm-servico');
+  var elemTotal = document.getElementById('confirm-total');
+
+  if (elemPet) { elemPet.textContent = pet; }
+  if (elemHorario) { elemHorario.textContent = horarioTexto; }
+  if (elemServico) { elemServico.textContent = servicoNome; }
+  if (elemTotal) { elemTotal.textContent = 'R$ ' + total.toFixed(2).replace('.', ','); }
+}
+
 if (document.getElementById('checkout-servico')) {
-  preencherCheckout();
+    preencherCheckout();
+}
+
+if (document.getElementById('confirm-pet')) {
+    preencherConfirmacao();
 }
