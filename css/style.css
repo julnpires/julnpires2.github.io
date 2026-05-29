@@ -273,9 +273,9 @@ button.time-chip:not(.unavailable):focus {
   box-shadow: 0 0 0 0.1875rem var(--verde-claro);
 }
 .time-chip.unavailable {
-  background: rgba(0, 0, 0, 0.03);
-  color: #bbb;
-  font-weight: 500;
+  background: #e6e6e6;
+  color: #777;
+  font-weight: 600;
   cursor: default;
   border-color: transparent;
   box-shadow: none;
@@ -318,8 +318,10 @@ button.time-chip:not(.unavailable):focus {
   box-shadow: var(--sombra);
 }
 .btn:not(.primary):not(.danger) {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--texto);
+  background: #f0faf3;
+  color: var(--verde);
+  border: 0.0625rem solid rgba(46, 125, 53, 0.16);
+  box-shadow: var(--sombra);
 }
 
 .btn-disabled { opacity: 0.38; pointer-events: none; }
