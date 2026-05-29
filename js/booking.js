@@ -79,3 +79,48 @@ if (petLista) {
     });
   }
 }
+
+/* ---- CHECKOUT: exibe resumo da reserva ---- */
+function preencherCheckout() {
+  var servico = sessionStorage.getItem('servico_selecionado') || 'Passeio';
+  var pet = sessionStorage.getItem('pet_selecionado') || 'Mel';
+  var horario = sessionStorage.getItem('horario_selecionado') || '14:00';
+
+  var servicoNome = servico === 'Banho' ? 'Banho & Tosa' : servico === 'Passeio' ? 'Passeio (1h)' : servico;
+  var precoServico = servico === 'Hospedagem' ? 80 : servico === 'Banho' ? 60 : 35;
+  var taxaServico = 3.5;
+  var total = precoServico + taxaServico;
+
+  var hoje = new Date().toLocaleDateString('pt-BR', {
+    weekday: 'long',
+    day: '2-digit',
+    month: '2-digit'
+  });
+
+  var horarioTexto = horario;
+  if (!horarioTexto.includes('—')) {
+    horarioTexto = horarioTexto + ' — ' + horarioTexto;
+  }
+
+  var elemServico = document.getElementById('checkout-servico');
+  var elemPet = document.getElementById('checkout-pet');
+  var elemData = document.getElementById('checkout-data');
+  var elemHorario = document.getElementById('checkout-horario');
+  var elemServicoLabel = document.getElementById('checkout-servico-label');
+  var elemServicoValor = document.getElementById('checkout-servico-valor');
+  var elemTaxa = document.getElementById('checkout-taxaservico');
+  var elemTotal = document.getElementById('checkout-total');
+
+  if (elemServico) { elemServico.textContent = servicoNome; }
+  if (elemPet) { elemPet.textContent = pet; }
+  if (elemData) { elemData.textContent = 'Hoje, ' + hoje.split(', ')[1]; }
+  if (elemHorario) { elemHorario.textContent = horarioTexto; }
+  if (elemServicoLabel) { elemServicoLabel.textContent = servicoNome; }
+  if (elemServicoValor) { elemServicoValor.textContent = 'R$ ' + precoServico.toFixed(2).replace('.', ','); }
+  if (elemTaxa) { elemTaxa.textContent = 'R$ ' + taxaServico.toFixed(2).replace('.', ','); }
+  if (elemTotal) { elemTotal.textContent = 'R$ ' + total.toFixed(2).replace('.', ','); }
+}
+
+if (document.getElementById('checkout-servico')) {
+  preencherCheckout();
+}
